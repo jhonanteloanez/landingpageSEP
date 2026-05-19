@@ -37,6 +37,7 @@ body {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   color: var(--text);
   background: var(--paper);
+  overflow-x: hidden;
 }
 
 img,
@@ -151,12 +152,127 @@ a {
 
 .eyebrow,
 .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin: 0 0 14px;
   color: var(--cyan);
   font-size: 0.82rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
+}
+
+.kicker-symbol {
+  position: relative;
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: var(--cyan);
+  transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.kicker-symbol::before,
+.kicker-symbol::after {
+  position: absolute;
+  content: "";
+}
+
+.section-heading:hover .kicker-symbol,
+.section-grid > div:first-child:hover .kicker-symbol,
+.contact-panel:hover .kicker-symbol,
+.hero-content:hover .kicker-symbol {
+  transform: translateY(-3px) rotate(-6deg);
+  background: rgba(0, 242, 254, 0.12);
+  box-shadow: 0 12px 26px rgba(0, 242, 254, 0.16);
+}
+
+.symbol-bolt::before {
+  width: 10px;
+  height: 18px;
+  background: currentColor;
+  clip-path: polygon(48% 0, 100% 0, 62% 42%, 100% 42%, 36% 100%, 52% 56%, 12% 56%);
+}
+
+.symbol-tower::before {
+  width: 16px;
+  height: 18px;
+  background:
+    linear-gradient(63deg, transparent 44%, currentColor 45% 55%, transparent 56%),
+    linear-gradient(117deg, transparent 44%, currentColor 45% 55%, transparent 56%),
+    linear-gradient(currentColor, currentColor) center bottom / 2px 18px no-repeat;
+}
+
+.symbol-tower::after {
+  width: 20px;
+  height: 12px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.symbol-meter::before {
+  width: 15px;
+  height: 15px;
+  border: 2px solid currentColor;
+  border-radius: 50% 50% 3px 3px;
+}
+
+.symbol-meter::after {
+  width: 8px;
+  height: 2px;
+  background: currentColor;
+  transform: translate(2px, 2px) rotate(-38deg);
+  transform-origin: left center;
+}
+
+.symbol-board::before {
+  width: 16px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+}
+
+.symbol-board::after {
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 5px 0 currentColor, 0 10px 0 currentColor;
+}
+
+.symbol-network::before {
+  width: 19px;
+  height: 14px;
+  background:
+    linear-gradient(28deg, transparent 45%, currentColor 46% 54%, transparent 55%),
+    linear-gradient(-28deg, transparent 45%, currentColor 46% 54%, transparent 55%),
+    linear-gradient(90deg, transparent 45%, currentColor 46% 54%, transparent 55%);
+}
+
+.symbol-network::after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: -9px 6px 0 currentColor, 9px 6px 0 currentColor, 0 -6px 0 currentColor;
+}
+
+.symbol-phone::before {
+  width: 14px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+}
+
+.symbol-phone::after {
+  width: 4px;
+  height: 4px;
+  bottom: 6px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .hero .eyebrow {
@@ -425,15 +541,45 @@ h3 {
 }
 
 .service-card {
+  position: relative;
   min-height: 250px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
   box-shadow: 0 10px 32px rgba(23, 42, 56, 0.06);
+  overflow: hidden;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.service-card::before {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 54px;
+  height: 54px;
+  content: "";
+  opacity: 0.16;
+  background:
+    linear-gradient(90deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%),
+    linear-gradient(0deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%);
+  transform: rotate(45deg);
+  transition: transform 260ms ease, opacity 220ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 242, 254, 0.48);
+  box-shadow: 0 18px 42px rgba(23, 42, 56, 0.12);
+}
+
+.service-card:hover::before {
+  opacity: 0.32;
+  transform: rotate(58deg) scale(1.08);
 }
 
 .card-icon {
+  position: relative;
   display: inline-flex;
   width: 42px;
   height: 42px;
@@ -445,6 +591,63 @@ h3 {
   border-radius: 8px;
   font-size: 0.86rem;
   font-weight: 900;
+  transition: transform 220ms ease;
+}
+
+.card-icon::after {
+  position: absolute;
+  right: -12px;
+  bottom: -9px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 2px solid var(--cyan);
+  border-radius: 6px;
+  background: var(--paper);
+  transition: transform 220ms ease, border-radius 220ms ease;
+}
+
+.service-card:hover .card-icon {
+  transform: translateY(-3px);
+}
+
+.service-card:hover .card-icon::after {
+  transform: rotate(18deg) scale(1.08);
+}
+
+.service-engineering .card-icon::after {
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%),
+    linear-gradient(0deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%),
+    var(--paper);
+}
+
+.service-execution .card-icon::after {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.service-solar .card-icon::after {
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--cyan) 0 26%, transparent 28%),
+    conic-gradient(from 0deg, transparent 0 10%, rgba(0, 242, 254, 0.62) 10% 16%, transparent 16% 26%),
+    var(--paper);
+}
+
+.service-consulting .card-icon::after {
+  border-radius: 3px;
+  background:
+    linear-gradient(var(--cyan), var(--cyan)) 4px 5px / 9px 2px no-repeat,
+    linear-gradient(var(--cyan), var(--cyan)) 4px 10px / 12px 2px no-repeat,
+    var(--paper);
+}
+
+.service-maintenance .card-icon::after {
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 0 34%, var(--cyan) 36% 44%, transparent 46%),
+    var(--paper);
 }
 
 .service-card p {
