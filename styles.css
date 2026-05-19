@@ -552,30 +552,10 @@ h3 {
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.service-card::before {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 54px;
-  height: 54px;
-  content: "";
-  opacity: 0.16;
-  background:
-    linear-gradient(90deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%),
-    linear-gradient(0deg, transparent 46%, var(--cyan) 46% 54%, transparent 54%);
-  transform: rotate(45deg);
-  transition: transform 260ms ease, opacity 220ms ease;
-}
-
 .service-card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 242, 254, 0.48);
   box-shadow: 0 18px 42px rgba(23, 42, 56, 0.12);
-}
-
-.service-card:hover::before {
-  opacity: 0.32;
-  transform: rotate(58deg) scale(1.08);
 }
 
 .card-icon {
@@ -594,60 +574,8 @@ h3 {
   transition: transform 220ms ease;
 }
 
-.card-icon::after {
-  position: absolute;
-  right: -12px;
-  bottom: -9px;
-  width: 20px;
-  height: 20px;
-  content: "";
-  border: 2px solid var(--cyan);
-  border-radius: 6px;
-  background: var(--paper);
-  transition: transform 220ms ease, border-radius 220ms ease;
-}
-
 .service-card:hover .card-icon {
   transform: translateY(-3px);
-}
-
-.service-card:hover .card-icon::after {
-  transform: rotate(18deg) scale(1.08);
-}
-
-.service-engineering .card-icon::after {
-  border-radius: 50%;
-  background:
-    linear-gradient(90deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%),
-    linear-gradient(0deg, transparent 45%, var(--cyan) 45% 55%, transparent 55%),
-    var(--paper);
-}
-
-.service-execution .card-icon::after {
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-}
-
-.service-solar .card-icon::after {
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, var(--cyan) 0 26%, transparent 28%),
-    conic-gradient(from 0deg, transparent 0 10%, rgba(0, 242, 254, 0.62) 10% 16%, transparent 16% 26%),
-    var(--paper);
-}
-
-.service-consulting .card-icon::after {
-  border-radius: 3px;
-  background:
-    linear-gradient(var(--cyan), var(--cyan)) 4px 5px / 9px 2px no-repeat,
-    linear-gradient(var(--cyan), var(--cyan)) 4px 10px / 12px 2px no-repeat,
-    var(--paper);
-}
-
-.service-maintenance .card-icon::after {
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, transparent 0 34%, var(--cyan) 36% 44%, transparent 46%),
-    var(--paper);
 }
 
 .service-card p {
