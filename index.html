@@ -8,18 +8,19 @@
       content="SEP Servicios Energéticos Profesionales: ingeniería eléctrica, proyectos energéticos, consultoría técnica y mantenimiento especializado."
     />
     <title>SEP | Servicios Energéticos Profesionales</title>
-    <link rel="stylesheet" href="styles.css?v=9" />
+    <link rel="stylesheet" href="styles.css?v=27" />
   </head>
   <body>
     <header class="site-header" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="SEP inicio">
         <span class="brand-logo" aria-hidden="true">
           <svg viewBox="0 0 263 241" role="img">
-            <rect x="34" y="37" width="69" height="100" fill="none" stroke="currentColor" stroke-width="2.4" />
-            <path
-              d="M64 52h17L66 85h19l-36 43 13-36H49l15-40Z"
-              fill="currentColor"
-            />
+            <defs>
+              <clipPath id="header-bolt-crop">
+                <rect x="34" y="37" width="69" height="100" />
+              </clipPath>
+            </defs>
+            <image href="assets/sep-rayo-logo.jpeg" x="30" y="32" width="78" height="110" preserveAspectRatio="xMidYMid slice" clip-path="url(#header-bolt-crop)" />
             <text class="sep-word" x="125" y="109" fill="currentColor">SEP</text>
             <text class="tagline" x="132" y="180" fill="currentColor">SERVICIOS ENERGÉTICOS</text>
             <text class="tagline" x="132" y="201" fill="currentColor">PROFESIONALES</text>
@@ -57,7 +58,7 @@
         <div class="section-grid">
           <div>
             <p class="section-kicker"><span class="kicker-symbol symbol-tower" aria-hidden="true"></span>Quiénes somos</p>
-            <h2>Desarrollamos soluciones eléctricas y energéticas con criterio técnico real.</h2>
+            <h2>Desarrollamos soluciones eléctricas y energéticas <em>con criterio técnico real.</em></h2>
           </div>
           <div class="section-copy">
             <p>
@@ -66,6 +67,30 @@
               orientadas a las necesidades reales de la industria y la edificación.
             </p>
             <p class="quote">“La energía también se diseña.”</p>
+          </div>
+          <div class="intro-carousel" aria-label="Galer&iacute;a de proyectos SEP">
+            <div class="carousel-track">
+              <figure class="carousel-slide is-active">
+                <img src="assets/pdf-page3-img1.jpg" alt="Infraestructura el&eacute;ctrica de alta tensi&oacute;n" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/pdf-page8-img1.jpg" alt="Soluciones energ&eacute;ticas aplicadas a infraestructura" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/pdf-page10-img1.jpg" alt="Equipo t&eacute;cnico en entorno energ&eacute;tico" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/pdf-page1-img1.png" alt="Trabajo t&eacute;cnico y documentaci&oacute;n de proyectos" />
+              </figure>
+            </div>
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagen anterior" data-carousel-direction="prev">‹</button>
+            <button class="carousel-button carousel-next" type="button" aria-label="Imagen siguiente" data-carousel-direction="next">›</button>
+            <div class="carousel-dots" aria-label="Seleccionar imagen">
+              <button class="carousel-dot is-active" type="button" aria-label="Ver imagen 1" data-carousel-index="0"></button>
+              <button class="carousel-dot" type="button" aria-label="Ver imagen 2" data-carousel-index="1"></button>
+              <button class="carousel-dot" type="button" aria-label="Ver imagen 3" data-carousel-index="2"></button>
+              <button class="carousel-dot" type="button" aria-label="Ver imagen 4" data-carousel-index="3"></button>
+            </div>
           </div>
         </div>
       </section>
@@ -135,12 +160,12 @@
       <section class="services band" id="ofrecemos">
         <div class="section-heading">
           <p class="section-kicker"><span class="kicker-symbol symbol-board" aria-hidden="true"></span>Nuestros servicios</p>
-          <h2>Soluciones técnicas para diseñar, ejecutar y mantener instalaciones eléctricas confiables.</h2>
+          <h2>Soluciones técnicas para cada etapa de tu proyecto</h2>
         </div>
 
         <div class="service-grid">
           <article class="service-card service-engineering">
-            <span class="card-icon" aria-hidden="true">01</span>
+            <span class="card-icon service-icon-engineering" aria-hidden="true"></span>
             <h3>Ingeniería eléctrica y electromecánica</h3>
             <p>
               Desarrollo de ingeniería conceptual, básica y de detalle para proyectos
@@ -148,7 +173,7 @@
             </p>
           </article>
           <article class="service-card service-execution">
-            <span class="card-icon" aria-hidden="true">02</span>
+            <span class="card-icon service-icon-execution" aria-hidden="true"></span>
             <h3>Ejecución de proyectos</h3>
             <p>
               Construcción, montaje, supervisión y puesta en marcha de sistemas
@@ -157,7 +182,7 @@
             </p>
           </article>
           <article class="service-card service-solar">
-            <span class="card-icon" aria-hidden="true">03</span>
+            <span class="card-icon service-icon-solar" aria-hidden="true"></span>
             <h3>Energía solar fotovoltaica</h3>
             <p>
               Diseño e implementación de soluciones solares para autoconsumo y
@@ -166,7 +191,7 @@
             </p>
           </article>
           <article class="service-card service-consulting">
-            <span class="card-icon" aria-hidden="true">04</span>
+            <span class="card-icon service-icon-consulting" aria-hidden="true"></span>
             <h3>Estudios y consultoría especializada</h3>
             <p>
               Estudios eléctricos, análisis técnicos, peritajes, diagnósticos y
@@ -175,7 +200,7 @@
             </p>
           </article>
           <article class="service-card service-maintenance">
-            <span class="card-icon" aria-hidden="true">05</span>
+            <span class="card-icon service-icon-maintenance" aria-hidden="true"></span>
             <h3>Mantenimiento y soporte técnico</h3>
             <p>
               Servicios de mantenimiento preventivo y correctivo orientados a
@@ -220,25 +245,22 @@
       <section class="contact band" id="contacto">
         <div class="contact-panel">
           <div>
-            <p class="section-kicker"><span class="kicker-symbol symbol-phone" aria-hidden="true"></span>Contacto</p>
-            <h2>Hablemos de tu instalación o próximo proyecto.</h2>
+            <p class="section-kicker"><span class="kicker-symbol symbol-phone" aria-hidden="true"></span>Cont&aacute;ctanos</p>
             <p>
               Cuéntanos qué necesitas diseñar, evaluar, ejecutar o mantener y te
               orientamos con una mirada técnica desde el primer contacto.
             </p>
           </div>
           <div class="contact-list" aria-label="Datos de contacto">
-            <a href="https://wa.me/595981000000" target="_blank" rel="noreferrer">
+            <a class="contact-card contact-whatsapp" href="https://wa.me/595981000000" target="_blank" rel="noreferrer">
+              <img class="contact-icon" src="assets/contact-whatsapp.png" alt="" aria-hidden="true" />
               <span>WhatsApp</span>
               +595 981 000 000
             </a>
-            <a href="mailto:contacto@sep.com.py">
+            <a class="contact-card contact-mail" href="mailto:contacto@sep.com.py">
+              <img class="contact-icon" src="assets/contact-mail.png" alt="" aria-hidden="true" />
               <span>Correo</span>
               contacto@sep.com.py
-            </a>
-            <a href="tel:+59521000000">
-              <span>Teléfono</span>
-              +595 21 000 000
             </a>
           </div>
         </div>
@@ -249,11 +271,12 @@
       <a class="footer-brand" href="#inicio" aria-label="SEP inicio">
         <span class="brand-logo" aria-hidden="true">
           <svg viewBox="0 0 263 241" role="img">
-            <rect x="34" y="37" width="69" height="100" fill="none" stroke="currentColor" stroke-width="2.4" />
-            <path
-              d="M64 52h17L66 85h19l-36 43 13-36H49l15-40Z"
-              fill="currentColor"
-            />
+            <defs>
+              <clipPath id="footer-bolt-crop">
+                <rect x="34" y="37" width="69" height="100" />
+              </clipPath>
+            </defs>
+            <image href="assets/sep-rayo-logo.jpeg" x="30" y="32" width="78" height="110" preserveAspectRatio="xMidYMid slice" clip-path="url(#footer-bolt-crop)" />
             <text class="sep-word" x="125" y="109" fill="currentColor">SEP</text>
             <text class="tagline" x="132" y="180" fill="currentColor">SERVICIOS ENERGÉTICOS</text>
             <text class="tagline" x="132" y="201" fill="currentColor">PROFESIONALES</text>
@@ -284,6 +307,43 @@
           });
         });
       });
+
+      const carousel = document.querySelector(".intro-carousel");
+      if (carousel) {
+        const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+        const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+        let currentSlide = 0;
+
+        const renderCarousel = () => {
+          slides.forEach((slide, index) => {
+            const offset = (index - currentSlide + slides.length) % slides.length;
+            slide.classList.toggle("is-active", offset === 0);
+            slide.classList.toggle("is-next", offset === 1);
+            slide.classList.toggle("is-after-next", offset === 2);
+          });
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("is-active", index === currentSlide);
+          });
+        };
+
+        carousel.querySelectorAll("[data-carousel-direction]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const direction = button.dataset.carouselDirection === "next" ? 1 : -1;
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            renderCarousel();
+          });
+        });
+
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            currentSlide = Number(dot.dataset.carouselIndex);
+            renderCarousel();
+          });
+        });
+
+        renderCarousel();
+      }
     </script>
   </body>
 </html>
