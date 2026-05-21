@@ -8,7 +8,7 @@
       content="SEP Servicios Energéticos Profesionales: ingeniería eléctrica, proyectos energéticos, consultoría técnica y mantenimiento especializado."
     />
     <title>SEP | Servicios Energéticos Profesionales</title>
-    <link rel="stylesheet" href="styles.css?v=83" />
+    <link rel="stylesheet" href="styles.css?v=88" />
   </head>
   <body>
     <header class="site-header" aria-label="Navegación principal">
@@ -66,16 +66,22 @@
           <div class="intro-carousel" aria-label="Galer&iacute;a de proyectos SEP">
             <div class="carousel-track">
               <figure class="carousel-slide is-active">
-                <img src="assets/pdf-page3-img1.jpg" alt="Infraestructura el&eacute;ctrica de alta tensi&oacute;n" />
+                <img src="assets/gallery-supervision-tecnica.jpeg" alt="Equipo t&eacute;cnico SEP supervisando paneles solares" />
               </figure>
               <figure class="carousel-slide">
-                <img src="assets/pdf-page8-img1.jpg" alt="Soluciones energ&eacute;ticas aplicadas a infraestructura" />
+                <img src="assets/gallery-montaje-campo.jpeg" alt="T&eacute;cnicos trabajando en infraestructura el&eacute;ctrica de campo" />
               </figure>
               <figure class="carousel-slide">
-                <img src="assets/pdf-page10-img1.jpg" alt="Equipo t&eacute;cnico en entorno energ&eacute;tico" />
+                <img src="assets/gallery-sistemas-solares.jpeg" alt="Sistema solar fotovoltaico instalado en techo" />
               </figure>
               <figure class="carousel-slide">
-                <img src="assets/pdf-page1-img1.png" alt="Trabajo t&eacute;cnico y documentaci&oacute;n de proyectos" />
+                <img src="assets/gallery-puesta-marcha.jpeg" alt="Tablero el&eacute;ctrico armado para puesta en marcha" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/gallery-planos-detalle-tecnico.jpeg" alt="Canalizaciones y detalle t&eacute;cnico de instalaci&oacute;n el&eacute;ctrica" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/gallery-continuidad-operativa.jpeg" alt="Infraestructura el&eacute;ctrica exterior para continuidad operativa" />
               </figure>
             </div>
             <button class="carousel-button carousel-prev" type="button" aria-label="Imagen anterior" data-carousel-direction="prev">‹</button>
@@ -85,6 +91,8 @@
               <button class="carousel-dot" type="button" aria-label="Ver imagen 2" data-carousel-index="1"></button>
               <button class="carousel-dot" type="button" aria-label="Ver imagen 3" data-carousel-index="2"></button>
               <button class="carousel-dot" type="button" aria-label="Ver imagen 4" data-carousel-index="3"></button>
+              <button class="carousel-dot" type="button" aria-label="Ver imagen 5" data-carousel-index="4"></button>
+              <button class="carousel-dot" type="button" aria-label="Ver imagen 6" data-carousel-index="5"></button>
             </div>
           </div>
         </div>
@@ -290,16 +298,16 @@
             </p>
           </div>
           <div class="contact-list" aria-label="Datos de contacto">
-            <a class="contact-card contact-whatsapp" href="https://wa.me/595981000000" target="_blank" rel="noreferrer">
+            <a class="contact-card contact-whatsapp" href="https://wa.me/59177005519" target="_blank" rel="noreferrer">
               <img class="contact-icon" src="assets/contact-whatsapp.png" alt="" aria-hidden="true" />
               <span>WhatsApp</span>
-              <strong>+595 981 000 000</strong>
+              <strong>+591 77005519</strong>
               <span class="contact-arrow" aria-hidden="true">→</span>
             </a>
-            <a class="contact-card contact-mail" href="mailto:contacto@sep.com.py">
+            <a class="contact-card contact-mail" href="mailto:info@sep.com.bo">
               <img class="contact-icon" src="assets/contact-mail.png" alt="" aria-hidden="true" />
               <span>Correo</span>
-              <strong>contacto@sep.com.py</strong>
+              <strong>info@sep.com.bo</strong>
               <span class="contact-arrow" aria-hidden="true">→</span>
             </a>
           </div>
@@ -382,8 +390,16 @@
         engineering: {
           title: "Ingeniería eléctrica y electromecánica",
           items: [
-            "Ingeniería conceptual",
-            "Planos y detalle técnico",
+            {
+              label: "Ingeniería conceptual",
+              image: "assets/gallery-ingenieria-conceptual.jpg",
+              position: "center center",
+            },
+            {
+              label: "Planos y detalle técnico",
+              image: "assets/gallery-planos-detalle-tecnico.jpeg",
+              position: "center center",
+            },
             {
               label: "Baja y media tensión",
               image: "assets/gallery-baja-media-tension.jpeg",
@@ -401,21 +417,30 @@
               label: "Supervisión técnica",
               image: "assets/gallery-supervision-tecnica.jpeg",
             },
-            "Puesta en marcha",
+            {
+              label: "Puesta en marcha",
+              image: "assets/gallery-puesta-marcha.jpeg",
+              position: "center center",
+            },
           ],
         },
         solar: {
           title: "Energía solar fotovoltaica",
           items: [
             {
-              label: "Instalación solar fotovoltaica",
-              image: "assets/solar-fotovoltaica-01.jpeg",
+              label: "Sistemas solares",
+              image: "assets/gallery-sistemas-solares.jpeg",
+              position: "center center",
             },
             {
               label: "Autoconsumo",
               image: "assets/gallery-autoconsumo.jpeg",
             },
-            "Electromovilidad",
+            {
+              label: "Electromovilidad",
+              image: "assets/gallery-electromovilidad.jpg",
+              position: "center center",
+            },
           ],
         },
         consulting: {
@@ -425,8 +450,16 @@
               label: "Diagnósticos eléctricos",
               image: "assets/gallery-diagnosticos-electricos.jpeg",
             },
-            "Peritajes técnicos",
-            "Estudios PGSST",
+            {
+              label: "Peritajes técnicos",
+              image: "assets/gallery-peritajes-tecnicos.jpeg",
+              position: "center center",
+            },
+            {
+              label: "Estudios PGSST",
+              image: "assets/gallery-estudios-pgsst.jpg",
+              position: "center center",
+            },
           ],
         },
         maintenance: {
@@ -436,8 +469,16 @@
               label: "Mantenimiento preventivo",
               image: "assets/gallery-mantenimiento-preventivo.jpeg",
             },
-            "Soporte correctivo",
-            "Continuidad operativa",
+            {
+              label: "Soporte correctivo",
+              image: "assets/gallery-soporte-correctivo.jpeg",
+              position: "center center",
+            },
+            {
+              label: "Continuidad operativa",
+              image: "assets/gallery-continuidad-operativa.jpeg",
+              position: "center center",
+            },
           ],
         },
       };
@@ -467,7 +508,8 @@
           serviceGallery.innerHTML = data.items
             .map((item) => {
               if (typeof item === "object" && item.image) {
-                return `<figure class="gallery-slot gallery-slot-image"><img src="${item.image}" alt="${item.label}"><figcaption>${item.label}</figcaption></figure>`;
+                const position = item.position ? ` style="object-position: ${item.position};"` : "";
+                return `<figure class="gallery-slot gallery-slot-image"><img src="${item.image}" alt="${item.label}"${position}><figcaption>${item.label}</figcaption></figure>`;
               }
 
               return `<div class="gallery-slot">${item}<br><span>Espacio para foto</span></div>`;
