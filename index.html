@@ -8,23 +8,13 @@
       content="SEP Servicios Energéticos Profesionales: ingeniería eléctrica, proyectos energéticos, consultoría técnica y mantenimiento especializado."
     />
     <title>SEP | Servicios Energéticos Profesionales</title>
-    <link rel="stylesheet" href="styles.css?v=73" />
+    <link rel="stylesheet" href="styles.css?v=83" />
   </head>
   <body>
     <header class="site-header" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="SEP inicio">
         <span class="brand-logo" aria-hidden="true">
-          <svg viewBox="0 0 263 241" role="img">
-            <defs>
-              <clipPath id="header-bolt-crop">
-                <rect x="34" y="37" width="69" height="100" />
-              </clipPath>
-            </defs>
-            <image href="assets/sep-rayo-logo.jpeg" x="30" y="32" width="78" height="110" preserveAspectRatio="xMidYMid slice" clip-path="url(#header-bolt-crop)" />
-            <text class="sep-word" x="125" y="109" fill="currentColor">SEP</text>
-            <text class="tagline" x="132" y="180" fill="currentColor">SERVICIOS ENERGÉTICOS</text>
-            <text class="tagline" x="132" y="201" fill="currentColor">PROFESIONALES</text>
-          </svg>
+          <img class="brand-logo-img" src="assets/sep-full-logo.png" alt="" />
         </span>
       </a>
 
@@ -43,6 +33,7 @@
         <div class="hero-content">
           <p class="eyebrow">Servicios Energéticos Profesionales</p>
           <p class="hero-logo">SEP</p>
+          <span class="hero-rule" aria-hidden="true"></span>
           <h1 class="hero-headline">
             Ingeniería eléctrica y energética<br />
             para proyectos que exigen<br />
@@ -319,21 +310,11 @@
     <footer class="site-footer">
       <a class="footer-brand" href="#inicio" aria-label="SEP inicio">
         <span class="brand-logo" aria-hidden="true">
-          <svg viewBox="0 0 263 241" role="img">
-            <defs>
-              <clipPath id="footer-bolt-crop">
-                <rect x="34" y="37" width="69" height="100" />
-              </clipPath>
-            </defs>
-            <image href="assets/sep-rayo-logo.jpeg" x="30" y="32" width="78" height="110" preserveAspectRatio="xMidYMid slice" clip-path="url(#footer-bolt-crop)" />
-            <text class="sep-word" x="125" y="109" fill="currentColor">SEP</text>
-            <text class="tagline" x="132" y="180" fill="currentColor">SERVICIOS ENERGÉTICOS</text>
-            <text class="tagline" x="132" y="201" fill="currentColor">PROFESIONALES</text>
-          </svg>
+          <img class="brand-logo-img" src="assets/sep-full-logo.png" alt="" />
         </span>
       </a>
       <div class="footer-claim">
-        <img class="footer-tower-art" src="assets/footer-towers.png?v=2" alt="" aria-hidden="true" />
+        <img class="footer-tower-art" src="assets/footer-towers.png?v=3" alt="" aria-hidden="true" />
         <p>Energía hecha con criterio.</p>
       </div>
     </footer>
@@ -400,23 +381,64 @@
       const serviceGalleryData = {
         engineering: {
           title: "Ingeniería eléctrica y electromecánica",
-          items: ["Ingeniería conceptual", "Planos y detalle técnico", "Baja y media tensión"],
+          items: [
+            "Ingeniería conceptual",
+            "Planos y detalle técnico",
+            {
+              label: "Baja y media tensión",
+              image: "assets/gallery-baja-media-tension.jpeg",
+            },
+          ],
         },
         execution: {
           title: "Ejecución de proyectos",
-          items: ["Montaje en campo", "Supervisión técnica", "Puesta en marcha"],
+          items: [
+            {
+              label: "Montaje en campo",
+              image: "assets/gallery-montaje-campo.jpeg",
+            },
+            {
+              label: "Supervisión técnica",
+              image: "assets/gallery-supervision-tecnica.jpeg",
+            },
+            "Puesta en marcha",
+          ],
         },
         solar: {
           title: "Energía solar fotovoltaica",
-          items: ["Sistemas solares", "Autoconsumo", "Electromovilidad"],
+          items: [
+            {
+              label: "Instalación solar fotovoltaica",
+              image: "assets/solar-fotovoltaica-01.jpeg",
+            },
+            {
+              label: "Autoconsumo",
+              image: "assets/gallery-autoconsumo.jpeg",
+            },
+            "Electromovilidad",
+          ],
         },
         consulting: {
           title: "Estudios y consultoría especializada",
-          items: ["Diagnósticos eléctricos", "Peritajes técnicos", "Estudios PGSST"],
+          items: [
+            {
+              label: "Diagnósticos eléctricos",
+              image: "assets/gallery-diagnosticos-electricos.jpeg",
+            },
+            "Peritajes técnicos",
+            "Estudios PGSST",
+          ],
         },
         maintenance: {
           title: "Mantenimiento y soporte técnico",
-          items: ["Mantenimiento preventivo", "Soporte correctivo", "Continuidad operativa"],
+          items: [
+            {
+              label: "Mantenimiento preventivo",
+              image: "assets/gallery-mantenimiento-preventivo.jpeg",
+            },
+            "Soporte correctivo",
+            "Continuidad operativa",
+          ],
         },
       };
 
@@ -443,7 +465,13 @@
 
           serviceModalTitle.textContent = data.title;
           serviceGallery.innerHTML = data.items
-            .map((item) => `<div class="gallery-slot">${item}<br><span>Espacio para foto</span></div>`)
+            .map((item) => {
+              if (typeof item === "object" && item.image) {
+                return `<figure class="gallery-slot gallery-slot-image"><img src="${item.image}" alt="${item.label}"><figcaption>${item.label}</figcaption></figure>`;
+              }
+
+              return `<div class="gallery-slot">${item}<br><span>Espacio para foto</span></div>`;
+            })
             .join("");
           serviceModal.classList.add("is-open");
           serviceModal.setAttribute("aria-hidden", "false");

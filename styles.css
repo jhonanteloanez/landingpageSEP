@@ -84,29 +84,21 @@ a {
 }
 
 .brand-logo {
+  position: relative;
   display: block;
-  width: clamp(88px, 7vw, 108px);
+  width: clamp(118px, 8.5vw, 142px);
+  height: clamp(82px, 6.4vw, 96px);
+  overflow: hidden;
 }
 
-.brand-logo svg {
+.brand-logo-img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
   width: 100%;
   height: auto;
-  color: var(--paper);
-}
-
-.brand-logo .sep-word {
-  font-family: "Molot", "Arial Black", Impact, sans-serif;
-  font-size: 66px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.brand-logo .tagline {
-  font-family: "General Sans", Arial, Helvetica, sans-serif;
-  font-size: 13.8px;
-  font-weight: 800;
-  letter-spacing: 2.55px;
-  text-anchor: middle;
+  transform: translateY(-50%);
 }
 
 .nav-links {
@@ -333,13 +325,21 @@ h2 em {
 }
 
 .hero-logo {
-  margin-bottom: clamp(22px, 3vh, 34px);
+  margin-bottom: clamp(16px, 2vh, 24px);
   color: rgba(255, 255, 255, 0.96);
   font-family: "Molot", "Arial Black", Impact, sans-serif;
-  font-size: clamp(4.2rem, 9vw, 8rem);
+  font-size: clamp(2.55rem, 5.4vw, 4.8rem);
   line-height: 0.82;
   font-weight: 400;
   letter-spacing: -0.04em;
+}
+
+.hero-rule {
+  display: block;
+  width: 74px;
+  height: 2px;
+  margin: 0 0 clamp(22px, 3vh, 34px);
+  background: var(--soft-cyan);
 }
 
 .hero-headline {
@@ -978,10 +978,31 @@ h2 em {
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
+.service-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(91, 116, 128, 0.14), rgba(105, 211, 220, 0.16));
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
 .service-card:hover {
   transform: translateY(-6px);
   border-color: rgba(79, 166, 181, 0.42);
   box-shadow: 0 24px 54px rgba(23, 42, 56, 0.11);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .card-icon {
@@ -1253,6 +1274,22 @@ h2 em {
   font-weight: 800;
 }
 
+.gallery-slot-image {
+  align-content: stretch;
+  overflow: hidden;
+  padding: 0;
+  border-style: solid;
+  background: var(--paper);
+}
+
+.gallery-slot-image figcaption {
+  padding: 12px 14px 14px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-align: left;
+}
+
 .gallery-slot span {
   display: inline-block;
   margin-top: 6px;
@@ -1265,9 +1302,9 @@ h2 em {
 
 .gallery-slot img {
   width: 100%;
-  height: 100%;
+  height: 210px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 .specialties {
@@ -1400,7 +1437,7 @@ h2 em {
 .contact-panel h2 {
   max-width: 560px;
   color: var(--ink);
-  font-size: clamp(3rem, 5vw, 5.45rem);
+  font-size: clamp(2.17rem, 3.61vw, 3.94rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
   font-weight: 500;
@@ -1524,7 +1561,8 @@ h2 em {
 }
 
 .footer-brand .brand-logo {
-  width: 160px;
+  width: clamp(150px, 12vw, 190px);
+  height: clamp(104px, 9vw, 128px);
 }
 
 .site-footer p {
@@ -1579,7 +1617,7 @@ h2 em {
   .intro .section-copy {
     grid-row: 2;
     max-width: 520px;
-    margin-top: 0;
+    margin-top: -52px;
   }
 
   .intro-carousel {
@@ -1793,7 +1831,8 @@ h2 em {
   }
 
   .brand-logo {
-    width: 94px;
+    width: 116px;
+    height: 86px;
   }
 
   .hero {
