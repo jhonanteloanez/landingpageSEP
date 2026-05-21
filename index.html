@@ -8,7 +8,7 @@
       content="SEP Servicios Energéticos Profesionales: ingeniería eléctrica, proyectos energéticos, consultoría técnica y mantenimiento especializado."
     />
     <title>SEP | Servicios Energéticos Profesionales</title>
-    <link rel="stylesheet" href="styles.css?v=37" />
+    <link rel="stylesheet" href="styles.css?v=73" />
   </head>
   <body>
     <header class="site-header" aria-label="Navegación principal">
@@ -42,11 +42,13 @@
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow">Servicios Energéticos Profesionales</p>
-          <h1>SEP</h1>
-          <p class="hero-copy">
-            Ingeniería eléctrica y energética para proyectos que exigen precisión
-            técnica, ejecución confiable y soluciones pensadas para la realidad operativa.
-          </p>
+          <p class="hero-logo">SEP</p>
+          <h1 class="hero-headline">
+            Ingeniería eléctrica y energética<br />
+            para proyectos que exigen<br />
+            <span>precisión, ejecución confiable</span><br />
+            <span>y criterio técnico</span>.
+          </h1>
           <div class="hero-actions">
             <a class="button button-primary" href="#contacto">Solicitar asesoría</a>
             <a class="button button-secondary" href="#ofrecemos">Ver servicios</a>
@@ -102,7 +104,7 @@
           <div class="vision-intro">
             <div class="section-heading">
               <p class="section-kicker"><span class="kicker-symbol symbol-meter" aria-hidden="true"></span>Enfoque SEP</p>
-              <h2>Ingeniería con propósito, precisión y visión de futuro.</h2>
+              <h2>Ingeniería con<br />propósito, precisión y<br />visión de futuro.</h2>
             </div>
             <p>
               SEP combina criterio técnico, ejecución responsable y una mirada
@@ -164,7 +166,7 @@
       <section class="services band" id="ofrecemos">
         <div class="section-heading">
           <p class="section-kicker"><span class="kicker-symbol symbol-board" aria-hidden="true"></span>Nuestros servicios</p>
-          <h2>Soluciones técnicas para cada<br />etapa de tu proyecto<span>.</span></h2>
+          <h2>Soluciones técnicas para cada etapa de tu proyecto<span>.</span></h2>
           <span class="services-rule" aria-hidden="true"></span>
           <p class="services-intro">
             Ofrecemos ingeniería, ejecución y soporte especializado con altos estándares
@@ -256,18 +258,19 @@
         <div class="section-grid">
           <div>
             <p class="section-kicker"><span class="kicker-symbol symbol-network" aria-hidden="true"></span>Áreas de especialización</p>
-            <h2>Experiencia aplicada en sistemas críticos y crecimiento industrial.</h2>
+            <h2><span>Experiencia aplicada en sistemas</span><br />críticos y crecimiento industrial</h2>
           </div>
           <div class="section-copy">
+            <img class="specialties-tower-art" src="assets/transmission-towers.png" alt="" aria-hidden="true" />
             <ul class="feature-list">
-              <li>Sistemas eléctricos en baja y media tensión.</li>
-              <li>Generación distribuida y energía solar fotovoltaica.</li>
-              <li>Sistemas de puesta a tierra.</li>
-              <li>Sistemas contra incendios.</li>
-              <li>Peritajes e inspecciones eléctricas.</li>
-              <li>Estudios eléctricos para PGSST.</li>
-              <li>Calidad de energía y sistemas de potencia.</li>
-              <li>Infraestructura para electromovilidad.</li>
+              <li tabindex="0">Sistemas eléctricos en baja y media tensión.</li>
+              <li tabindex="0">Generación distribuida y energía solar fotovoltaica.</li>
+              <li tabindex="0">Sistemas de puesta a tierra.</li>
+              <li tabindex="0">Sistemas contra incendios.</li>
+              <li tabindex="0">Peritajes e inspecciones eléctricas.</li>
+              <li tabindex="0">Estudios eléctricos para PGSST.</li>
+              <li tabindex="0">Calidad de energía y sistemas de potencia.</li>
+              <li tabindex="0">Infraestructura para electromovilidad.</li>
             </ul>
           </div>
         </div>
@@ -286,23 +289,27 @@
 
       <section class="contact band" id="contacto">
         <div class="contact-panel">
-          <div>
+          <div class="contact-copy">
             <p class="section-kicker"><span class="kicker-symbol symbol-phone" aria-hidden="true"></span>Cont&aacute;ctanos</p>
+            <h2><span class="keep-line">Hablemos de</span><br />tu proyecto</h2>
+            <span class="contact-rule" aria-hidden="true"></span>
             <p>
-              Cuéntanos qué necesitas diseñar, evaluar, ejecutar o mantener y te
-              orientamos con una mirada técnica desde el primer contacto.
+              Diseñamos soluciones energéticas<br />
+              con <strong>criterio técnico.</strong>
             </p>
           </div>
           <div class="contact-list" aria-label="Datos de contacto">
             <a class="contact-card contact-whatsapp" href="https://wa.me/595981000000" target="_blank" rel="noreferrer">
               <img class="contact-icon" src="assets/contact-whatsapp.png" alt="" aria-hidden="true" />
               <span>WhatsApp</span>
-              +595 981 000 000
+              <strong>+595 981 000 000</strong>
+              <span class="contact-arrow" aria-hidden="true">→</span>
             </a>
             <a class="contact-card contact-mail" href="mailto:contacto@sep.com.py">
               <img class="contact-icon" src="assets/contact-mail.png" alt="" aria-hidden="true" />
               <span>Correo</span>
-              contacto@sep.com.py
+              <strong>contacto@sep.com.py</strong>
+              <span class="contact-arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -325,7 +332,10 @@
           </svg>
         </span>
       </a>
-      <p>Energía hecha con criterio.</p>
+      <div class="footer-claim">
+        <img class="footer-tower-art" src="assets/footer-towers.png?v=2" alt="" aria-hidden="true" />
+        <p>Energía hecha con criterio.</p>
+      </div>
     </footer>
 
     <script>
