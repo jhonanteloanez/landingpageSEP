@@ -1,0 +1,361 @@
+:root {
+  --bg-top: #10385a;
+  --bg-bottom: #082742;
+  --panel: rgba(66, 96, 124, 0.56);
+  --panel-border: rgba(255, 255, 255, 0.11);
+  --panel-highlight: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-soft: rgba(235, 244, 255, 0.76);
+  --accent: #59d7ef;
+  --accent-soft: rgba(89, 215, 239, 0.24);
+  --shadow: 0 18px 40px rgba(1, 15, 28, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background:
+    linear-gradient(rgba(6, 28, 50, 0.22), rgba(6, 28, 50, 0.22)),
+    url("./background-sep.png") center top / cover no-repeat;
+  color: var(--text-main);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 32, 58, 0.08), rgba(7, 32, 58, 0.22));
+  pointer-events: none;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 0 18px 16px;
+}
+
+.hero-card {
+  position: relative;
+  width: min(100%, 720px);
+  padding: 0 24px 32px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.background-grid,
+.background-tower {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.background-grid::before,
+.background-grid::after {
+  content: "";
+  position: absolute;
+  opacity: 0.17;
+}
+
+.background-grid::before {
+  width: 320px;
+  height: 320px;
+  left: -120px;
+  top: 72px;
+  border: 1px solid rgba(177, 225, 255, 0.24);
+  transform: rotate(-13deg);
+  box-shadow:
+    40px 40px 0 -39px rgba(177, 225, 255, 0.24),
+    80px 80px 0 -79px rgba(177, 225, 255, 0.24),
+    120px 120px 0 -119px rgba(177, 225, 255, 0.24);
+}
+
+.background-grid::after {
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(158, 207, 240, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(158, 207, 240, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  clip-path: polygon(0 4%, 35% 0, 28% 52%, 0 45%);
+  filter: blur(0.3px);
+}
+
+.background-tower {
+  right: -8px;
+  left: auto;
+  width: 44%;
+  opacity: 0.22;
+}
+
+.background-tower svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(222, 242, 255, 0.88);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0;
+}
+
+.brand-mark {
+  display: flex;
+  justify-content: center;
+  width: min(100%, 560px);
+  transform: translateY(42px);
+  margin-bottom: 2px;
+}
+
+.brand-logo-image {
+  display: block;
+  width: min(100%, 500px);
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 12px 28px rgba(0, 0, 0, 0.18))
+    drop-shadow(0 0 18px rgba(255, 255, 255, 0.06));
+}
+
+.brand-subtitle {
+  margin: 6px 0 0;
+  max-width: 380px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
+}
+
+.divider {
+  width: 104px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+  box-shadow: 0 0 16px rgba(89, 215, 239, 0.34);
+}
+
+.hero-copy {
+  margin: 18px 0 0;
+  max-width: 560px;
+  font-size: clamp(1.6rem, 3.4vw, 2.35rem);
+  line-height: 1.4;
+  font-weight: 400;
+  color: rgba(245, 250, 255, 0.98);
+}
+
+.hero-copy span {
+  color: var(--accent);
+}
+
+.link-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.link-card {
+  display: grid;
+  grid-template-columns: 92px 1fr 40px;
+  align-items: center;
+  gap: 22px;
+  min-height: 118px;
+  padding: 18px 22px;
+  border: 1px solid var(--panel-border);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 100%),
+    var(--panel);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(89, 215, 239, 0.42);
+  box-shadow: 0 24px 50px rgba(0, 11, 21, 0.32);
+  outline: none;
+}
+
+.icon-wrap {
+  width: 100%;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding-right: 18px;
+}
+
+.icon-wrap svg {
+  width: 52px;
+  height: 52px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-wrap svg.fill-icon {
+  fill: #ffffff;
+  stroke: none;
+}
+
+.icon-wrap svg.whatsapp-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.text-wrap strong {
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.text-wrap small {
+  max-width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text-soft);
+}
+
+.arrow-wrap {
+  display: grid;
+  place-items: center;
+}
+
+.arrow-wrap svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.divider-bottom {
+  margin-top: 36px;
+}
+
+@media (max-width: 760px) {
+  .hero-card {
+    padding: 0 16px 26px;
+  }
+
+  .brand-block {
+    padding-top: 0;
+  }
+
+  .background-tower {
+    width: 48%;
+    opacity: 0.2;
+  }
+
+  .brand-mark {
+    width: min(100%, 360px);
+    transform: translateY(24px);
+    margin-bottom: 0;
+  }
+
+  .brand-logo-image {
+    width: min(100%, 320px);
+  }
+
+  .brand-subtitle {
+    margin-top: 4px;
+    max-width: 290px;
+    font-size: 0.66rem;
+    letter-spacing: 0.24em;
+    line-height: 1.45;
+  }
+
+  .hero-copy {
+    max-width: 330px;
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .link-list {
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .link-card {
+    grid-template-columns: 72px 1fr 24px;
+    gap: 14px;
+    min-height: 98px;
+    padding: 14px 16px;
+    border-radius: 22px;
+  }
+
+  .icon-wrap {
+    height: 58px;
+    padding-right: 12px;
+  }
+
+  .icon-wrap svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-wrap svg.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .text-wrap strong {
+    font-size: 1rem;
+  }
+
+  .text-wrap small {
+    max-width: 200px;
+    font-size: 0.72rem;
+  }
+
+  .arrow-wrap svg {
+    width: 22px;
+    height: 22px;
+  }
+}
