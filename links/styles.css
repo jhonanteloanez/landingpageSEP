@@ -122,8 +122,8 @@ body::before {
   display: flex;
   justify-content: center;
   width: min(100%, 560px);
-  transform: translateY(42px);
-  margin-bottom: 2px;
+  transform: translateY(14px);
+  margin-bottom: -2px;
 }
 
 .brand-logo-image {
@@ -137,7 +137,7 @@ body::before {
 }
 
 .brand-subtitle {
-  margin: 6px 0 0;
+  margin: -84px 0 0;
   max-width: 380px;
   font-size: 0.92rem;
   font-weight: 600;
@@ -295,8 +295,8 @@ body::before {
 
   .brand-mark {
     width: min(100%, 360px);
-    transform: translateY(24px);
-    margin-bottom: 0;
+    transform: translateY(8px);
+    margin-bottom: -2px;
   }
 
   .brand-logo-image {
@@ -304,7 +304,7 @@ body::before {
   }
 
   .brand-subtitle {
-    margin-top: 4px;
+    margin-top: -48px;
     max-width: 290px;
     font-size: 0.66rem;
     letter-spacing: 0.24em;
