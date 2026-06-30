@@ -2708,7 +2708,7 @@ h2 em {
 }
 
 .courses-controls {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
   white-space: nowrap;
@@ -2744,6 +2744,7 @@ h2 em {
 .courses-track {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: clamp(22px, 2.4vw, 34px);
   overflow: visible;
   padding: 0;
@@ -2777,7 +2778,7 @@ h2 em {
 
 .course-cover {
   position: relative;
-  flex: 0 0 190px;
+  flex: 0 0 214px;
   min-height: 0;
   overflow: hidden;
   color: #fff;
@@ -2809,7 +2810,7 @@ h2 em {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 18px 20px 66px;
+  padding: 22px 22px 70px;
 }
 
 .course-cover-copy span,
@@ -2821,7 +2822,7 @@ h2 em {
 }
 
 .course-cover-copy span {
-  margin-bottom: 0;
+  margin: 0 0 0 0;
   padding: 6px 9px;
   border-radius: 6px;
   color: #103041;
@@ -2887,14 +2888,23 @@ h2 em {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 15px;
-  height: 15px;
-  border: 2px solid var(--technical-blue);
-  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  color: var(--technical-blue);
+  background: currentColor;
   content: "";
-  opacity: 0.75;
+  flex-shrink: 0;
+  opacity: 0.78;
   transform: translateY(-50%);
+  mask: var(--course-meta-icon) center / contain no-repeat;
+  -webkit-mask: var(--course-meta-icon) center / contain no-repeat;
 }
+
+.course-meta-area { --course-meta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 4 14h7l-1 8 9-12h-7l1-8Z'/%3E%3C/svg%3E"); }
+.course-meta-date { --course-meta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z'/%3E%3C/svg%3E"); }
+.course-meta-duration { --course-meta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E"); }
+.course-meta-mode { --course-meta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E"); }
+.course-meta-security { --course-meta-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z'/%3E%3C/svg%3E"); }
 
 .course-meta dt {
   color: #6c7f8c;
@@ -3089,8 +3099,8 @@ h2 em {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10, 31, 45, 0.16), rgba(10, 31, 45, 0.9)),
-    linear-gradient(90deg, rgba(10, 31, 45, 0.82), rgba(10, 31, 45, 0.24));
+    linear-gradient(180deg, rgba(10, 31, 45, 0.28), rgba(10, 31, 45, 0.88)),
+    linear-gradient(90deg, rgba(10, 31, 45, 0.9), rgba(10, 31, 45, 0.38) 62%, rgba(10, 31, 45, 0.2));
   content: "";
 }
 
@@ -3121,10 +3131,11 @@ h2 em {
 }
 
 .course-modal-cover h3 {
-  max-width: 420px;
+  max-width: 360px;
   margin: 0;
-  font-size: clamp(1.72rem, 2.25vw, 2.28rem);
-  line-height: 1.02;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: clamp(1.42rem, 1.9vw, 1.9rem);
+  line-height: 1.12;
   text-transform: uppercase;
 }
 
@@ -3190,9 +3201,22 @@ h2 em {
   border-radius: 12px;
   color: #123042;
   background: rgba(105, 211, 220, 0.48);
-  font-size: 0.78rem;
-  font-weight: 900;
 }
+
+.course-detail-icon::before {
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  content: "";
+  mask: var(--course-detail-icon) center / contain no-repeat;
+  -webkit-mask: var(--course-detail-icon) center / contain no-repeat;
+}
+
+.course-detail-icon-energy { --course-detail-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 4 14h7l-1 8 9-12h-7l1-8Z'/%3E%3C/svg%3E"); }
+.course-detail-icon-location { --course-detail-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E"); }
+.course-detail-icon-clock { --course-detail-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E"); }
+.course-detail-icon-calendar { --course-detail-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z'/%3E%3C/svg%3E"); }
+.course-detail-icon-users { --course-detail-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E"); }
 
 .course-detail-item span:not(.course-detail-icon) {
   display: block;
@@ -3673,7 +3697,7 @@ h2 em {
 
   .course-cover,
   .course-cover img {
-    min-height: 270px;
+    min-height: 292px;
   }
 
   .course-cover-copy {
@@ -3727,7 +3751,12 @@ h2 em {
   }
 
   .course-modal-cover h3 {
-    font-size: clamp(1.55rem, 8vw, 2.15rem);
+    max-width: 320px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: clamp(1.42rem, 7vw, 1.9rem);
+    line-height: 1.12;
+    text-transform: uppercase;
   }
 
   .course-modal-cover figcaption img {
@@ -3744,13 +3773,6 @@ h2 em {
 
   .course-detail-list {
     grid-template-columns: 1fr;
-  }
-
-  .course-modal-actions {
-    display: grid;
-  }
-
-  .course-modal-button {
     width: 100%;
   }
 
