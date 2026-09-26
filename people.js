@@ -19,3 +19,16 @@
   });
   dialog.addEventListener('close', () => opener?.focus({preventScroll:true}));
 })();
+
+(() => {
+  const dialog = document.getElementById('contact-dialog');
+  const button = document.querySelector('.contact-open');
+  if (!dialog || !button) return;
+  button.addEventListener('click', () => dialog.showModal());
+  dialog.querySelector('.contact-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const rect = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+  });
+  dialog.addEventListener('close', () => button.focus({preventScroll:true}));
+})();

@@ -49,3 +49,30 @@ body:has(.team-dialog[open]){overflow:hidden}
 @media(min-width:981px){.nav-links{gap:clamp(10px,1.5vw,24px);font-size:clamp(11px,1vw,14px)}}
 @media(max-width:980px){.people-wrap{width:calc(100% - 48px)}.team-card,.team-card:nth-child(-n+3){grid-column:span 6}.clients-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.team-hero{padding-block:48px}.profile-summary{padding-inline:24px}.profile-summary h2{font-size:26px}}
 @media(max-width:620px){.people-wrap{width:calc(100% - 36px)}.team-hero h2 br,.clients-intro br{display:none}.team-architecture{opacity:.35;width:65%}.team-grid{gap:14px}.team-card,.team-card:nth-child(-n+3){grid-column:span 12;min-height:210px;padding:24px}.team-card .team-role{min-height:0}.team-card h3{font-size:26px}.clients-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.clients-grid li>span{font-size:19px}.clients-intro{font-size:16px}.profile-layout{grid-template-columns:1fr;min-height:0}.profile-summary{padding:34px 26px}.profile-summary .team-role{padding-right:24px}.profile-summary h2{max-width:260px}.profile-details{padding:24px}.team-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}.profile-block h3{font-size:12px;gap:12px}.profile-block p{margin-left:0}}
+.contact-banner{position:relative;isolation:isolate;overflow:hidden;background:#eff6fa;color:#193747}
+.contact-banner-inner{position:relative;padding-block:48px;z-index:1;pointer-events:none}
+.contact-eyebrow{display:flex;align-items:center;gap:20px;font-size:11px;text-transform:uppercase;letter-spacing:.03em;margin:0 0 28px;color:#4d6272}
+.contact-eyebrow:before{content:'';width:42px;height:2px;background:#73c6d8}
+.contact-banner h2{font-size:clamp(36px,3.8vw,52px);line-height:1.08;letter-spacing:-.04em;margin:0 0 20px}
+.contact-banner-copy{font-size:17px;line-height:1.5;margin:0 0 20px;max-width:550px}
+.contact-open{pointer-events:auto;border:0;border-radius:4px;background:#7bd3e2;color:#193747;font-weight:500;line-height:1.4;font-family:inherit;font-size:17px;padding:14px 26px;display:inline-flex;gap:30px;align-items:center;cursor:pointer}
+.contact-open span{font-size:24px;line-height:1}
+.contact-open:hover{background:#99dfeb}
+.contact-solar-photo{position:absolute;z-index:-1;right:0;top:0;bottom:0;width:48%;background:linear-gradient(#588daf20,#163b5333),url('assets/sep-solar-poster.jpg') center 70%/cover;clip-path:polygon(73% 0,100% 0,100% 100%,0 100%)}
+.contact-banner:after{content:'';position:absolute;width:1px;height:82%;background:#83cddd;right:35%;bottom:-12%;transform:rotate(43deg);z-index:-1}
+.site-footer{background:#183546;padding:30px max(48px,calc((100vw - 1240px)/2));min-height:160px}
+.site-footer .footer-claim{padding-left:32px;border-left:1px solid #79becd;align-self:center;min-height:68px;margin-left:auto}
+.site-footer .footer-claim p{font-size:15px;color:#fff}
+.contact-dialog{width:min(560px,calc(100% - 32px));padding:40px;border:0;border-radius:10px;color:#193747;max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 25px 90px #102b4155}
+.contact-dialog::backdrop{background:#142638aa}
+body:has(.contact-dialog[open]){overflow:hidden}
+.contact-close{position:absolute;right:14px;top:12px;border:0;background:none;color:#193747;font:30px/1 Arial;cursor:pointer;width:36px;height:36px}
+.contact-dialog h2{font-size:30px;line-height:1.15;letter-spacing:-.025em;margin:0 0 12px}
+.contact-dialog>p:not(.contact-eyebrow){color:#607384;margin-bottom:24px}
+.contact-options{display:grid;gap:12px}
+.contact-options a{display:flex;align-items:center;gap:16px;padding:20px 16px;border:1px solid #dce6ed;border-radius:6px;background:#f4f8fb}
+.contact-options a:hover{border-color:#398fa7;background:#eaf4f8}
+.contact-options img{width:34px;height:34px;object-fit:contain}
+.contact-options small,.contact-options strong{display:block}.contact-options small{font-size:12px;color:#607384;margin-bottom:4px}.contact-options strong{font-size:17px}.contact-options a>span:last-child{margin-left:auto}
+.contact-open:focus-visible,.contact-close:focus-visible,.contact-options a:focus-visible{outline:3px solid #398fa7;outline-offset:4px}
+@media(max-width:700px){.contact-banner-inner{padding-block:38px 155px}.contact-banner-copy{max-width:440px;font-size:16px}.contact-banner-copy br{display:none}.contact-solar-photo{top:auto;height:160px;width:65%;clip-path:polygon(65% 0,100% 0,100% 100%,0 100%)}.contact-banner:after{height:145px;right:40%;bottom:-25px}.site-footer{padding:26px 24px;flex-direction:row;align-items:center;gap:20px}.site-footer .footer-claim{padding-left:18px;min-height:58px}.site-footer .footer-claim p{font-size:13px;max-width:140px}.site-footer .brand-logo{width:125px;height:95px}.contact-dialog{padding:36px 22px 24px}.contact-options a{gap:12px;padding:16px 12px}.contact-options strong{font-size:15px}}
