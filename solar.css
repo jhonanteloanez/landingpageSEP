@@ -94,3 +94,6 @@
  .solar-contact { align-items: start; flex-direction: column; gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Shared reading size for the solar benefits and Enfoque body copy. */
+.solar-benefits-list li, #enfoque .vision-intro > p, #enfoque .vision-block > p { font-size: clamp(1.04rem, 1.2vw, 1.18rem); }
