@@ -2,7 +2,7 @@
 .team-section,.clients-section{color:#193747}
 .team-hero{position:relative;isolation:isolate;overflow:hidden;background:#eef4f8;padding:72px 0 56px}
 .people-kicker{font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:#398fa7;margin:0 0 26px;font-weight:700}
-.team-hero h2,.clients-section h2{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;margin:0;font-weight:700}
+.team-hero h2,.clients-section h2{color:#f7fafc;font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;margin:0;font-weight:700}
 .team-hero h2 span{color:#42a8c0}
 .people-rule{display:block;width:48px;height:2px;background:#66bdd0;margin-top:28px}
 .team-architecture{position:absolute;z-index:-1;right:-2%;bottom:-55px;width:46%;height:115%;background:repeating-linear-gradient(0deg,transparent 0 90px,#6889a52b 91px 92px),repeating-linear-gradient(90deg,#d6e2ec 0 130px,#b7cadb 131px 132px);clip-path:polygon(0 100%,0 77%,25% 53%,44% 61%,44% 40%,100% 0,100% 100%);opacity:.7}
@@ -16,15 +16,18 @@
 .team-card button span{font-size:27px;line-height:1;transition:transform .2s}
 .team-card button:hover span{transform:translateX(5px)}
 .team-card button:focus-visible,.profile-close:focus-visible{outline:3px solid #398fa7;outline-offset:5px}
-.clients-section{padding:54px 0 64px;background:#fff}
-.clients-section .people-kicker{display:flex;gap:20px;align-items:center;color:#536976}
+.clients-section{padding:54px 0 40px;background:#19394b;color:#f7fafc}
+.clients-header{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:50px;align-items:center}
+.clients-statement{border-left:1px solid #85b2c4;padding-left:24px;margin:0;color:#bdcdd6;font-size:15px;line-height:1.6;text-transform:uppercase}
+.clients-section h2{color:#f7fafc;font-size:clamp(32px,3.4vw,50px)}
+.clients-section .people-kicker{display:flex;gap:20px;align-items:center;color:#a3e3ec;margin-bottom:16px}
 .clients-section .people-kicker:before{content:'';width:42px;height:2px;background:#75c9d8}
-.clients-intro{font-size:18px;line-height:1.5;color:#52616f;margin:18px 0 12px}
-.clients-placeholder{font-size:13px;color:#687b87;margin:0 0 26px}
+.clients-intro{font-size:18px;line-height:1.5;color:#d3dfe6;margin:14px 0 12px}
+.clients-placeholder{font-size:12px;color:#9fb7c5;margin:0 0 20px}
 .clients-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;padding:0;margin:0;list-style:none}
-.clients-grid li{min-height:108px;border:1px solid #e2e8ec;border-radius:5px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;text-align:center;padding:14px}
-.clients-grid li>span{font-size:21px;font-weight:700;letter-spacing:-.025em;color:#31556e}
-.clients-grid small{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8396a3}
+.clients-grid li{min-height:92px;border:1px solid #ffffff29;border-radius:7px;background:#132e3d22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;text-align:center;padding:14px}
+.clients-grid li>span{font-size:21px;font-weight:700;letter-spacing:-.025em;color:#f5f8fa}
+.clients-grid small{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#a5bfcd}
 .clients-grid .client-more>span{color:#91bfd1;letter-spacing:.2em}
 .team-dialog{padding:0;border:0;border-radius:10px;width:min(900px,calc(100% - 40px));max-height:calc(100dvh - 48px);color:#1b344c;box-shadow:0 30px 100px #0d253a55;overflow:auto}
 .team-dialog::backdrop{background:#142638aa}
@@ -76,3 +79,6 @@ body:has(.contact-dialog[open]){overflow:hidden}
 .contact-options small,.contact-options strong{display:block}.contact-options small{font-size:12px;color:#607384;margin-bottom:4px}.contact-options strong{font-size:17px}.contact-options a>span:last-child{margin-left:auto}
 .contact-open:focus-visible,.contact-close:focus-visible,.contact-options a:focus-visible{outline:3px solid #398fa7;outline-offset:4px}
 @media(max-width:700px){.contact-banner-inner{padding-block:38px 155px}.contact-banner-copy{max-width:440px;font-size:16px}.contact-banner-copy br{display:none}.contact-solar-photo{top:auto;height:160px;width:65%;clip-path:polygon(65% 0,100% 0,100% 100%,0 100%)}.contact-banner:after{height:145px;right:40%;bottom:-25px}.site-footer{padding:26px 24px;flex-direction:row;align-items:center;gap:20px}.site-footer .footer-claim{padding-left:18px;min-height:58px}.site-footer .footer-claim p{font-size:13px;max-width:140px}.site-footer .brand-logo{width:125px;height:95px}.contact-dialog{padding:36px 22px 24px}.contact-options a{gap:12px;padding:16px 12px}.contact-options strong{font-size:15px}}
+
+@media(max-width:980px){.clients-header{grid-template-columns:1fr;gap:24px}.clients-statement{font-size:13px}.clients-statement br{display:none}}
+@media(max-width:620px){.clients-section{padding-block:40px}.clients-grid{gap:10px}.clients-grid li{min-height:96px}.clients-statement{padding-left:16px}}
