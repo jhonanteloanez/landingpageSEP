@@ -1,12 +1,15 @@
 .people-wrap{width:min(1240px,calc(100% - 96px));margin-inline:auto}
 .team-section,.clients-section{color:#193747}
-.team-hero{position:relative;isolation:isolate;overflow:hidden;background:#eef4f8;padding:72px 0 56px}
+.team-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:340px;box-sizing:border-box;background:linear-gradient(115deg,#f8fbfd 0%,#f2f7fb 55%,#e6eff7 100%);padding:64px 0}
 .people-kicker{font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:#398fa7;margin:0 0 26px;font-weight:700}
 .team-hero h2,.clients-section h2{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;margin:0;font-weight:700}
 .team-hero h2{color:#193747}
 .team-hero h2 span{color:#42a8c0}
 .people-rule{display:block;width:48px;height:2px;background:#66bdd0;margin-top:28px}
-.team-architecture{position:absolute;z-index:-1;right:-2%;bottom:-55px;width:46%;height:115%;background:repeating-linear-gradient(0deg,transparent 0 90px,#6889a52b 91px 92px),repeating-linear-gradient(90deg,#d6e2ec 0 130px,#b7cadb 131px 132px);clip-path:polygon(0 100%,0 77%,25% 53%,44% 61%,44% 40%,100% 0,100% 100%);opacity:.7}
+.team-architecture{position:absolute;z-index:-1;right:0;bottom:0;width:53%;height:100%;clip-path:polygon(0 100%,0 86%,30% 45%,47% 53%,100% 0,100% 100%);background:linear-gradient(148deg,#f9fcff88 0 36%,#dbe7f1aa 36% 58%,#c7d9e9cc 58% 100%);opacity:.9}
+.team-architecture::before,.team-architecture::after{content:'';position:absolute;inset:0}
+.team-architecture::before{background:repeating-linear-gradient(90deg,transparent 0 118px,#9bb3c850 119px 120px),repeating-linear-gradient(0deg,transparent 0 96px,#9bb3c840 97px 98px)}
+.team-architecture::after{background:linear-gradient(142deg,transparent 0 44%,#ffffff8c 44% 46%,transparent 46% 100%),linear-gradient(90deg,#ffffff35,transparent 65%)}
 .team-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;padding-block:26px 56px}
 .team-card{grid-column:span 4;border:1px solid #d8e2e9;border-radius:6px;background:linear-gradient(120deg,#fbfcfd,#eff4f8);padding:28px;display:flex;flex-direction:column;min-height:238px}
 .team-role{color:#368da6;text-transform:uppercase;font-size:14px;line-height:1.4;margin:0 0 24px}
