@@ -70,7 +70,7 @@
             <span class="section-rule intro-rule-quote" aria-hidden="true"></span>
             <p class="quote">“La energía también se diseña.”</p>
           </div>
-          <div class="intro-carousel" aria-label="Galer&iacute;a de proyectos SEP">
+          <div class="intro-carousel" data-photo-carousel aria-label="Galer&iacute;a de proyectos SEP">
             <div class="carousel-track">
               <figure class="carousel-slide is-active">
                 <img src="assets/quienes-carousel-01.jpeg" alt="Inspecci&oacute;n t&eacute;cnica frente a tableros el&eacute;ctricos industriales" />
@@ -143,9 +143,17 @@
               <h5>Inversión optimizada</h5><p>Soluciones a la medida<br />de cada proyecto.</p>
               <h5>Retorno estimado</h5><p>Evaluado por proyecto.</p>
             </article></div>
-            <div class="solar-project-photos" aria-label="Instalaciones de paneles solares">
-              <figure><img src="assets/solar-fotovoltaica-01.jpeg" alt="Paneles solares instalados sobre una cubierta" loading="lazy" /></figure>
-              <figure><img src="assets/gallery-sistemas-solares.jpeg" alt="Instalación de un sistema solar fotovoltaico" loading="lazy" /></figure>
+            <div class="intro-carousel solar-project-carousel" data-photo-carousel aria-label="Instalaciones de paneles solares">
+              <div class="carousel-track">
+                <figure class="carousel-slide"><img src="assets/solar-fotovoltaica-01.jpeg" alt="Paneles solares instalados sobre una cubierta" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/gallery-sistemas-solares.jpeg" alt="Instalación de un sistema solar fotovoltaico" loading="lazy" /></figure>
+              </div>
+              <button class="carousel-button carousel-prev" type="button" aria-label="Imagen solar anterior" data-carousel-direction="prev">‹</button>
+              <button class="carousel-button carousel-next" type="button" aria-label="Imagen solar siguiente" data-carousel-direction="next">›</button>
+              <div class="carousel-dots" aria-label="Seleccionar imagen solar">
+                <button class="carousel-dot is-active" type="button" aria-label="Ver imagen solar 1" data-carousel-index="0"></button>
+                <button class="carousel-dot" type="button" aria-label="Ver imagen solar 2" data-carousel-index="1"></button>
+              </div>
             </div>
           </div>
         </section>
@@ -549,7 +557,6 @@
 <article class="team-card"><p class="team-role">Asistente de proyectos</p><h3>Vinda Alba Saldias</h3><button type="button" data-person="3" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Vinda Alba Saldias">Ver más <span aria-hidden="true">→</span></button></article>
 <article class="team-card"><p class="team-role">Ingeniera de energías renovables</p><h3>Ing. Jhara Torrelio R.</h3><button type="button" data-person="4" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Ing. Jhara Torrelio R.">Ver más <span aria-hidden="true">→</span></button></article>
 <article class="team-card"><p class="team-role">Maestro electricista</p><h3>Gonzalo</h3><button type="button" data-person="5" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Gonzalo">Ver más <span aria-hidden="true">→</span></button></article>
-<article class="team-card"><p class="team-role">Asistente de ingeniería</p><h3>Daniel Rocha Soliz</h3><button type="button" data-person="6" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Daniel Rocha Soliz">Ver más <span aria-hidden="true">→</span></button></article>
 </div>
       </section>
       <section id="clientes" class="clients-section" aria-labelledby="clients-heading"><div class="people-wrap">
@@ -625,8 +632,7 @@
         });
       });
 
-      const carousel = document.querySelector(".intro-carousel");
-      if (carousel) {
+      document.querySelectorAll("[data-photo-carousel]").forEach((carousel) => {
         const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
         const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
         let currentSlide = 0;
@@ -660,7 +666,7 @@
         });
 
         renderCarousel();
-      }
+      });
 
       document.querySelectorAll("[data-course-carousel]").forEach((button) => {
         button.addEventListener("click", () => {
