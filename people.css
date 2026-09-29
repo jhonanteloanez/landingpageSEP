@@ -2,7 +2,8 @@
 .team-section,.clients-section{color:#193747}
 .team-hero{position:relative;isolation:isolate;overflow:hidden;background:#eef4f8;padding:72px 0 56px}
 .people-kicker{font-size:13px;letter-spacing:.17em;text-transform:uppercase;color:#398fa7;margin:0 0 26px;font-weight:700}
-.team-hero h2,.clients-section h2{color:#f7fafc;font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;margin:0;font-weight:700}
+.team-hero h2,.clients-section h2{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;margin:0;font-weight:700}
+.team-hero h2{color:#193747}
 .team-hero h2 span{color:#42a8c0}
 .people-rule{display:block;width:48px;height:2px;background:#66bdd0;margin-top:28px}
 .team-architecture{position:absolute;z-index:-1;right:-2%;bottom:-55px;width:46%;height:115%;background:repeating-linear-gradient(0deg,transparent 0 90px,#6889a52b 91px 92px),repeating-linear-gradient(90deg,#d6e2ec 0 130px,#b7cadb 131px 132px);clip-path:polygon(0 100%,0 77%,25% 53%,44% 61%,44% 40%,100% 0,100% 100%);opacity:.7}
