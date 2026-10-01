@@ -32,7 +32,7 @@
 .solar-card-top .solar-icon { width: 76px; height: 76px; flex-shrink: 0; }
 .solar-number { color: #82909a; font-size: 28px; font-weight: 700; }
 .solar-icon { width: 64px; height: 64px; stroke: currentColor; stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.solar-home-icon { stroke-width: 2.2; }
+.solar-home-icon { stroke-width: 2.7; }
 .solar-card h4 { font-size: 16px; text-transform: uppercase; margin: 0; letter-spacing: -.02em; }
 .solar-card .solar-rule { width: 22px; margin: 18px 0; }
 .solar-metrics { margin: 0; display: grid; gap: 24px; }
