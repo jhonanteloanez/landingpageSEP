@@ -359,7 +359,7 @@
           <div class="courses-hero">
             <div class="courses-hero-copy">
               <p class="section-kicker"><span class="kicker-symbol symbol-board" aria-hidden="true"></span>Cursos</p>
-              <h2>Cursos t&eacute;cnicos especializados</h2>
+              <h2 id="courses-title">Cursos t&eacute;cnicos especializados</h2>
               <p>Capacitaciones orientadas al fortalecimiento t&eacute;cnico en &aacute;reas el&eacute;ctricas, energ&eacute;ticas y de seguridad operativa.</p>
               <span class="courses-rule" aria-hidden="true"></span>
               <strong>Formaci&oacute;n t&eacute;cnica con criterio, experiencia y visi&oacute;n de futuro.</strong>
@@ -368,43 +368,6 @@
               <img src="assets/courses-hero-classroom.jpeg" alt="Capacitaci&oacute;n t&eacute;cnica en aula sobre sistemas el&eacute;ctricos" />
             </figure>
           </div>
-          <div class="courses-block">
-            <div class="courses-block-head">
-              <div>
-                <h2 id="courses-title">Pr&oacute;ximos cursos</h2>
-                <p>Conoce nuestras pr&oacute;ximas capacitaciones programadas.</p>
-              </div>
-              <div class="courses-controls" aria-label="Navegaci&oacute;n de pr&oacute;ximos cursos">
-                <a href="#cursos-proximos">Ver todos &rarr;</a>
-                <button type="button" data-course-carousel="prev" data-course-target="upcoming" aria-label="Curso anterior">&larr;</button>
-                <button type="button" data-course-carousel="next" data-course-target="upcoming" aria-label="Curso siguiente">&rarr;</button>
-              </div>
-            </div>
-
-            <div class="courses-track" id="cursos-proximos" data-course-track="upcoming">
-              <article class="course-card course-card-featured">
-                <div class="course-cover">
-                  <img src="assets/gallery-infraestructura-carga.jpg" alt="Infraestructura de carga para veh&iacute;culos el&eacute;ctricos" />
-                  <div class="course-cover-copy">
-                    <span>Pr&oacute;ximo curso</span>
-                    <small>Curso t&eacute;cnico</small>
-                    <h4>Bases t&eacute;cnicas y normativas para instalaci&oacute;n de estaciones de carga para veh&iacute;culos el&eacute;ctricos</h4>
-                    <img class="course-cover-logo" src="assets/sep-full-logo.png" alt="" aria-hidden="true" />
-                  </div>
-                </div>
-                <div class="course-card-body">
-                  <dl class="course-meta">
-                    <div class="course-meta-item course-meta-area"><dt>&Aacute;rea:</dt><dd>Electricidad</dd></div>
-                    <div class="course-meta-item course-meta-date"><dt>Fecha:</dt><dd>9 al 11 de julio</dd></div>
-                    <div class="course-meta-item course-meta-duration"><dt>Carga horaria:</dt><dd>8 horas</dd></div>
-                    <div class="course-meta-item course-meta-mode"><dt>Modalidad:</dt><dd>Presencial</dd></div>
-                  </dl>
-                  <button class="course-action" type="button" data-course-action="enroll">Inscribirme</button>
-                </div>
-              </article>
-            </div>
-          </div>
-
           <div class="courses-block">
             <div class="courses-block-head">
               <div>
@@ -433,92 +396,33 @@
                   <dl class="course-meta">
                     <div class="course-meta-item course-meta-area"><dt>&Aacute;rea:</dt><dd>Electricidad</dd></div>
                     <div class="course-meta-item course-meta-date"><dt>Fecha:</dt><dd>9 al 11 de julio</dd></div>
+                    <div class="course-meta-item course-meta-mode"><dt>Modalidad:</dt><dd>Presencial</dd></div>
                   </dl>
                   <button class="course-action course-action-secondary" type="button" data-course-action="gallery" data-course-id="completed-electromovilidad">Ver galer&iacute;a</button>
+                </div>
+              </article>
+              <article class="course-card">
+                <div class="course-cover">
+                  <img src="assets/gallery-infraestructura-carga.jpg" alt="Curso virtual sobre infraestructura de carga el&eacute;ctrica" />
+                  <div class="course-cover-copy">
+                    <span>Curso realizado</span>
+                    <small>Curso t&eacute;cnico · Virtual</small>
+                    <h4>Bases t&eacute;cnicas y normativas para instalaci&oacute;n de estaciones de carga para veh&iacute;culos el&eacute;ctricos</h4>
+                    <img class="course-cover-logo" src="assets/sep-full-logo.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+                <div class="course-card-body">
+                  <dl class="course-meta">
+                    <div class="course-meta-item course-meta-area"><dt>&Aacute;rea:</dt><dd>Electricidad</dd></div>
+                    <div class="course-meta-item course-meta-date"><dt>Fecha:</dt><dd>27 al 29 y 31 de julio</dd></div>
+                    <div class="course-meta-item course-meta-mode"><dt>Modalidad:</dt><dd>Virtual</dd></div>
+                  </dl>
                 </div>
               </article>
             </div>
           </div>
         </div>
       </section>
-
-      <div class="course-modal" data-course-modal hidden role="dialog" aria-modal="true" aria-labelledby="course-modal-title">
-        <div class="course-modal-backdrop" data-course-modal-close></div>
-        <div class="course-modal-panel" role="document">
-          <button class="course-modal-close" type="button" data-course-modal-close aria-label="Cerrar modal">&times;</button>
-          <div class="course-modal-grid">
-            <figure class="course-modal-cover">
-              <img src="assets/gallery-infraestructura-carga.jpg" alt="Estaci&oacute;n de carga para veh&iacute;culos el&eacute;ctricos" />
-              <figcaption>
-                <span>Curso t&eacute;cnico</span>
-                <h3>Bases t&eacute;cnicas y normativas para instalaci&oacute;n de estaciones de carga para veh&iacute;culos el&eacute;ctricos</h3>
-                <img src="assets/sep-full-logo.png" alt="SEP Servicios Energ&eacute;ticos Profesionales" />
-              </figcaption>
-            </figure>
-
-            <div class="course-modal-content">
-              <p class="section-kicker">Inscripci&oacute;n</p>
-              <h2 id="course-modal-title">Bases t&eacute;cnicas y normativas para instalaci&oacute;n de estaciones de carga para veh&iacute;culos el&eacute;ctricos</h2>
-              <p class="course-modal-description">
-                Curso t&eacute;cnico especializado orientado al conocimiento de criterios t&eacute;cnicos, normativos y de seguridad para la instalaci&oacute;n de infraestructura de recarga para veh&iacute;culos el&eacute;ctricos.
-              </p>
-
-              <div class="course-detail-list" aria-label="Datos del curso">
-                <div class="course-detail-item">
-                  <span class="course-detail-icon course-detail-icon-energy" aria-hidden="true"></span>
-                  <div><span>&Aacute;rea</span><strong>Electricidad</strong></div>
-                </div>
-                <div class="course-detail-item">
-                  <span class="course-detail-icon course-detail-icon-location" aria-hidden="true"></span>
-                  <div><span>Modalidad</span><strong>Presencial</strong></div>
-                </div>
-                <div class="course-detail-item">
-                  <span class="course-detail-icon course-detail-icon-clock" aria-hidden="true"></span>
-                  <div><span>Carga horaria</span><strong>8 horas</strong></div>
-                </div>
-                <div class="course-detail-item">
-                  <span class="course-detail-icon course-detail-icon-calendar" aria-hidden="true"></span>
-                  <div><span>Fechas</span><strong>9 al 11 de julio</strong></div>
-                </div>
-                <div class="course-detail-item course-detail-wide">
-                  <span class="course-detail-icon course-detail-icon-users" aria-hidden="true"></span>
-                  <div><span>Dirigido a</span><strong>Ingenieros, t&eacute;cnicos y estudiantes</strong></div>
-                </div>
-              </div>
-
-              <div class="course-syllabus">
-                <h3>Temario:</h3>
-                <ul>
-                  <li>Introducci&oacute;n a la electromovilidad</li>
-                  <li>Tecnolog&iacute;a y modos de carga</li>
-                  <li>Infraestructura de recarga (IRVE)</li>
-                  <li>Normativas y seguridad</li>
-                  <li>Taller pr&aacute;ctico</li>
-                </ul>
-              </div>
-
-              <div class="course-modal-actions">
-                <a
-                  class="course-modal-button course-modal-button-secondary"
-                  href="https://wa.me/59173605801?text=Hola%2C%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%20t%C3%A9cnico%20de%20instalaci%C3%B3n%20de%20estaciones%20de%20carga%20para%20veh%C3%ADculos%20el%C3%A9ctricos."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Solicitar informaci&oacute;n
-                </a>
-                <a
-                  class="course-modal-button course-modal-button-primary"
-                  href="https://wa.me/59173605801?text=Hola%2C%20quisiera%20inscribirme%20al%20curso%20t%C3%A9cnico%20Bases%20t%C3%A9cnicas%20y%20normativas%20para%20instalaci%C3%B3n%20de%20estaciones%20de%20carga%20para%20veh%C3%ADculos%20el%C3%A9ctricos."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Inscribirme
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="course-gallery-modal" data-course-gallery-modal hidden role="dialog" aria-modal="true" aria-labelledby="course-gallery-title">
         <div class="course-gallery-backdrop" data-course-gallery-close></div>
@@ -554,7 +458,7 @@
 <article class="team-card"><p class="team-role">Gerente de ingeniería</p><h3>Ing. Sergio D. Revollo P.</h3><button type="button" data-person="1" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Ing. Sergio D. Revollo P.">Ver más <span aria-hidden="true">→</span></button></article>
 <article class="team-card"><p class="team-role">Coordinadora de desarrollo corporativo</p><h3>Arq. Ariana Quiroga V.</h3><button type="button" data-person="2" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Arq. Ariana Quiroga V.">Ver más <span aria-hidden="true">→</span></button></article>
 <article class="team-card"><p class="team-role">Asistente de proyectos</p><h3>Vinda Alba Saldias</h3></article>
-<article class="team-card team-card-name-only"><h3>Ing. C. Eduardo Limpias A.</h3></article>
+<article class="team-card"><p class="team-role">Ingeniero El&eacute;ctrico</p><h3>Ing. C. Eduardo Limpias A.</h3></article>
 <article class="team-card"><p class="team-role">Ingeniera de energías renovables</p><h3>Ing. Jhara Torrelio R.</h3><button type="button" data-person="3" aria-haspopup="dialog" aria-controls="team-profile" aria-label="Ver más sobre Ing. Jhara Torrelio R.">Ver más <span aria-hidden="true">→</span></button></article>
 <article class="team-card"><p class="team-role">Maestro electricista</p><h3>Gonzalo D. Flores</h3></article>
 <article class="team-card"><p class="team-role">Maestro electricista</p><h3>Y. Elian Alvis Castro</h3></article>
@@ -682,51 +586,6 @@
             behavior: "smooth",
           });
         });
-      });
-
-      const courseModal = document.querySelector("[data-course-modal]");
-      let lastCourseTrigger = null;
-
-      const getCourseFocusable = () =>
-        courseModal
-          ? Array.from(courseModal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
-          : [];
-
-      const closeCourseModal = () => {
-        if (!courseModal || courseModal.hidden) {
-          return;
-        }
-
-        courseModal.classList.remove("is-open");
-        document.body.classList.remove("modal-open");
-        window.setTimeout(() => {
-          courseModal.hidden = true;
-          lastCourseTrigger?.focus({ preventScroll: true });
-        }, 180);
-      };
-
-      const openCourseModal = (trigger) => {
-        if (!courseModal) {
-          return;
-        }
-
-        lastCourseTrigger = trigger;
-        courseModal.hidden = false;
-        window.requestAnimationFrame(() => {
-          courseModal.classList.add("is-open");
-          document.body.classList.add("modal-open");
-          courseModal.querySelector("[data-course-modal-close]")?.focus({ preventScroll: true });
-        });
-      };
-
-      document.addEventListener("click", (event) => {
-        const enrollButton = event.target.closest('[data-course-action="enroll"]');
-        if (!enrollButton) {
-          return;
-        }
-
-        event.preventDefault();
-        openCourseModal(enrollButton);
       });
 
       const courseGalleryData = {
@@ -1084,32 +943,6 @@
         }
 
         const focusable = getGalleryFocusable();
-        if (!focusable.length) {
-          return;
-        }
-
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      });
-
-      document.querySelectorAll("[data-course-modal-close]").forEach((button) => {
-        button.addEventListener("click", closeCourseModal);
-      });
-
-      courseModal?.addEventListener("keydown", (event) => {
-        if (event.key !== "Tab") {
-          return;
-        }
-
-        const focusable = getCourseFocusable();
         if (!focusable.length) {
           return;
         }
