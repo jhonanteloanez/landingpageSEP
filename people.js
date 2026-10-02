@@ -35,6 +35,30 @@
         'Experiencia como instructor y disertante en instalaciones eléctricas, normativa NB 777, seguridad eléctrica, puesta a tierra, domótica, eficiencia energética y energías renovables.',
       ],
     },
+    1: {
+      name: 'Ing. Sergio Denis Revollo Peña',
+      role: 'Gerente de Ingeniería',
+      summary: 'Ingeniero Electromecánico especializado en sistemas eléctricos, con experiencia en diseño, ingeniería y ejecución de proyectos en Media y Baja Tensión. Su trayectoria integra ingeniería eléctrica, modelado BIM y sistemas fotovoltaicos.',
+      formation: [
+        'Ingeniero Electromecánico – Universidad Autónoma Gabriel René Moreno.',
+        'Diplomado en Ingeniería de Sistemas Eléctricos de Potencia – Universidad Privada Boliviana.',
+        'Diplomado en Mantenimiento, Confiabilidad y Análisis de Fallas en Equipos Mecánicos – UTEPSA.',
+        'Diplomado en Operación, Control, Seguridad y Mantenimiento – UAGRM.',
+      ],
+      experience: 'Diseño y desarrollo de proyectos eléctricos en Media y Baja Tensión, redes eléctricas aéreas y subterráneas, sistemas de puesta a tierra y protección contra descargas atmosféricas. Experiencia en ingeniería, supervisión de obra y coordinación técnica, con aplicación de AutoCAD, Revit/BIM y ETAP en el desarrollo de proyectos eléctricos.',
+      certificationsTitle: 'Certificaciones y especialización',
+      certifications: [
+        'Autodesk Certified Professional: AutoCAD – Certificación internacional.',
+        'Revit for Electrical Building Systems – Certificación internacional.',
+        'Formación especializada en diseño y construcción de instalaciones eléctricas en Baja Tensión según NB 777:2024.',
+        'Formación como Técnico Instalador de Sistemas Fotovoltaicos de Generación Distribuida.',
+      ],
+      activity: [
+        'Gerente de Ingeniería en Servicios Energéticos Profesionales (SEP).',
+        'Disertante en formación técnica sobre bases técnicas y normativas para instalaciones de carga de vehículos eléctricos, en modalidades presencial y virtual.',
+        'Experiencia previa como Encargado de Ingeniería y Supervisor de Obra en empresas del sector electromecánico.',
+      ],
+    },
     2: {
       name: 'Arq. Ariana Quiroga Velásquez',
       role: 'Coordinadora de Desarrollo Corporativo',
