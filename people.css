@@ -44,6 +44,7 @@ body:has(.team-dialog[open]){overflow:hidden}
 .profile-summary .people-rule{margin:12px 0 30px;width:42px}
 .profile-summary h2{font-size:30px;line-height:1.25;letter-spacing:-.025em;margin:0}
 .profile-divider{display:block;width:56px;height:1px;background:#96adbe;margin:26px 0}
+.profile-summary-heading{font-size:13px;line-height:1.4;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2082ac;margin:0 0 14px}
 .profile-summary>p:last-of-type{font-size:16px;line-height:1.6}
 .profile-summary .team-architecture{width:120%;height:48%;bottom:0;opacity:.7}
 .profile-details{padding:30px 32px}
@@ -54,6 +55,9 @@ body:has(.team-dialog[open]){overflow:hidden}
 .profile-icon{width:50px;height:50px;flex-shrink:0;display:grid;place-items:center;background:#e4eff7;border-radius:50%}
 .profile-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .profile-block p{font-size:16px;line-height:1.6;margin:0 0 0 20px;color:#607384}
+.profile-copy ul{margin:0 0 0 20px;padding-left:20px;color:#607384;font-size:16px;line-height:1.55}
+.profile-copy li+li{margin-top:10px}
+.profile-copy li::marker{color:#46a9c1}
 .profile-close{position:sticky;top:12px;float:right;margin:12px 12px -48px 0;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:#fff;color:#18364d;cursor:pointer;font:30px/1 Arial}
 @media(min-width:981px){.nav-links{gap:clamp(10px,1.5vw,24px);font-size:clamp(11px,1vw,14px)}}
 @media(max-width:980px){.people-wrap{width:calc(100% - 48px)}.team-card,.team-card:nth-child(-n+3),.team-card:nth-last-child(2){grid-column:span 6}.clients-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.team-hero{padding-block:48px}.profile-summary{padding-inline:24px}.profile-summary h2{font-size:26px}}
