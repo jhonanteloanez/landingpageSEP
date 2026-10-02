@@ -3852,3 +3852,19 @@ h2 em {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.solar-carousel-count {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 18px;
+  min-width: 66px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(10, 35, 51, 0.78);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  transform: translateX(-50%);
+}

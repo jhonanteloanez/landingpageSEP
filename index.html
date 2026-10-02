@@ -145,14 +145,25 @@
             <div class="intro-carousel solar-project-carousel" data-photo-carousel aria-label="Instalaciones de paneles solares">
               <div class="carousel-track">
                 <figure class="carousel-slide"><img src="assets/solar-fotovoltaica-01.jpeg" alt="Paneles solares instalados sobre una cubierta" loading="lazy" /></figure>
-                <figure class="carousel-slide"><img src="assets/gallery-sistemas-solares.jpeg" alt="Instalación de un sistema solar fotovoltaico" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/gallery-sistemas-solares.jpeg" alt="Instalaci&oacute;n de un sistema solar fotovoltaico" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-01.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 1" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-02.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 2" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-03.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 3" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-04.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 4" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-05.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 5" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-06.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 6" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-07.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 7" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-08.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 8" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-09.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 9" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-10.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 10" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-11.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 11" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-12.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 12" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-13.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 13" loading="lazy" /></figure>
+                <figure class="carousel-slide"><img src="assets/solar-proyecto-14.jpeg" alt="Proyecto fotovoltaico SEP, fotograf&iacute;a 14" loading="lazy" /></figure>
               </div>
               <button class="carousel-button carousel-prev" type="button" aria-label="Imagen solar anterior" data-carousel-direction="prev">‹</button>
               <button class="carousel-button carousel-next" type="button" aria-label="Imagen solar siguiente" data-carousel-direction="next">›</button>
-              <div class="carousel-dots" aria-label="Seleccionar imagen solar">
-                <button class="carousel-dot is-active" type="button" aria-label="Ver imagen solar 1" data-carousel-index="0"></button>
-                <button class="carousel-dot" type="button" aria-label="Ver imagen solar 2" data-carousel-index="1"></button>
-              </div>
+              <span class="solar-carousel-count" data-carousel-count aria-live="polite">1 / 16</span>
             </div>
           </div>
         </section>
@@ -553,6 +564,8 @@
           dots.forEach((dot, index) => {
             dot.classList.toggle("is-active", index === currentSlide);
           });
+          const count = carousel.querySelector('[data-carousel-count]');
+          if (count) count.textContent = `${currentSlide + 1} / ${slides.length}`;
         };
 
         carousel.querySelectorAll("[data-carousel-direction]").forEach((button) => {
