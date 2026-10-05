@@ -29,7 +29,7 @@
 .solar-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .solar-card { border: 1px solid #edf0f2; border-radius: 7px; box-shadow: 0 2px 10px #19374708; padding: 26px; }
 .solar-card-top { display: flex; align-items: start; gap: 42px; margin-bottom: 22px; }
-.solar-card-top .solar-illustration { width: 88px; height: 88px; flex-shrink: 0; }
+.solar-card-top .solar-illustration { width: 108px; height: 108px; flex-shrink: 0; }
 .solar-number { color: #82909a; font-size: 28px; font-weight: 700; }
 .solar-icon { width: 64px; height: 64px; stroke: currentColor; stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .solar-card h4 { font-size: 16px; text-transform: uppercase; margin: 0; letter-spacing: -.02em; }
